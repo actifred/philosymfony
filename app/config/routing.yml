@@ -1,0 +1,3 @@
+poe_demo:
+    resource: "@PoeDemoBundle/Resources/config/routing.yml"
+    prefix:   /

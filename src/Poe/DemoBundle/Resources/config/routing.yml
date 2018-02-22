@@ -1,0 +1,38 @@
+poe_demo_homepage:
+    path:     /
+    defaults: { _controller: PoeDemoBundle:Default:index }
+
+poe_home_client:
+    path:    /client
+    defaults: { _controller: PoeDemoBundle:Client:index }
+
+poe_page_client:
+    path:    /client/{annee}/page/{pagenumber}
+    defaults:
+        _controller: PoeDemoBundle:Client:index
+        pagenumber: 1
+    requirements:
+        pagenumber: \d*
+        annee: \d{4}
+
+poe_annee_client:
+    path:    /client/{annee}
+    defaults: { _controller: PoeDemoBundle:Client:index }
+    requirements:
+        annee: \d{4}
+
+poe_detail_article:
+    path:    /article/{id}
+    defaults: { _controller: PoeDemoBundle:Article:detail }
+    
+poe_simple_form:
+    path:   /ajoute
+    defaults: { _controller: PoeDemoBundle:Article:index }
+
+poe_ajoute_form:
+    path:   /addarticle
+    defaults: { _controller: PoeDemoBundle:Article:autoform }
+
+poe_auto_form:
+    path:   /autoform
+    defaults: { _controller: PoeDemoBundle:Article:autoform }

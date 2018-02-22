@@ -1,0 +1,9 @@
+services:
+#    poe_demo.example:
+#        class: Poe\DemoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    poe_demo.data_provider:
+        class: Poe\DemoBundle\DataProvider\PoeDataProvider
+        arguments:
+          - "@router"
+  
